@@ -1,0 +1,28 @@
+body{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+article{
+    width: 980px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+h1{
+    color: #FFF ;
+    background: #e91e63;
+    padding: 10px;
+}
+
+h2{
+    color: #666;
+}
+a{
+    color: cornflowerblue;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}

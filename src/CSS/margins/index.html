@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title> Play Ground HTML, CSS and JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1> Play Ground</h1>
+
+    <h2>Collapsing Child Margins</h2>
+    <div class="one">
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </div>
+
+    <h2>Stop collapsing between parent and chaild </h2>
+    <div> Apply padding to the parent</div>
+    <code>padding:0.1px</code>
+    <div class="one" style="padding:0.1px;">
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </div>
+
+    <div>
+
+        <h2>Collapsing Child Margins</h2>
+
+        <div class="red">
+            <div class="orange">
+                <div class="yellow">
+                    <div class="green">
+                        <div class="blue">
+                            <div class="purple">Collapsed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2> Stop collapsing between parent and chaild </h2>
+        <div>apply :after clear floats to parent for top margin; and :before for bottom margin</div>
+        <code>
+             
+             .padding:after, .padding:before {
+                 content: '';
+                display:table;
+             }   
+        </code>
+
+        <div class="padding red">
+            <div class="padding orange">
+                <div class="padding yellow">
+                    <div class="padding green">
+                        <div class="padding blue">
+                            <div class="padding purple">Not Collapsed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
