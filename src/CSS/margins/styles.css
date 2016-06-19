@@ -28,7 +28,7 @@ body:before, body:after{
 /* DEMO STYLES */
 
 /* Parent */
-div {
+.two div {
   margin: 15px 0;
 }
 
@@ -36,6 +36,7 @@ div {
 .padding:after, .padding:before {
   content: '';
   display:table;
+  /*clear: both;*/
 }
 
 /* Here come the children */
@@ -61,4 +62,11 @@ div {
 
 .purple {
   background-color: #6c4ecd;
+}
+
+.sibling{
+    margin: 10px;
+}
+.float{
+    float: left;
 }

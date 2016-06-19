@@ -16,13 +16,13 @@
 
     <h2>Stop collapsing between parent and chaild </h2>
     <div> Apply padding to the parent</div>
-    <code>padding:0.1px</code>
+    <code>padding:0.1px or border</code>
     <div class="one" style="padding:0.1px;">
         <h1>Heading</h1>
         <p>Paragraph</p>
     </div>
 
-    <div>
+    <div class="two">
 
         <h2>Collapsing Child Margins</h2>
 
@@ -60,6 +60,84 @@
             </div>
         </div>
     </div>
+
+
+    <div class="three">
+
+        <h2>Collapsing Sibling Margins</h2>
+
+        <div class="padding red">
+            <div class="sibling green">
+                Sibling One
+            </div>
+            <div class="sibling blue">
+                Sibling two
+            </div>
+        </div>
+        <h2> Stop collapsing between Sibling </h2>
+        <div>apply overflow :hidden on parent and add float:left and clear:both on childrens</div>
+        <div>childrens dont expand 100%</div>
+
+        <div class="padding red" style="padding:0.1px; overflow:hidden;">
+            <div class="sibling green" style="float:left; clear:both">
+                Sibling One
+            </div>
+            <div class="sibling blue" style="float:left; clear:both">
+                Sibling two
+            </div>
+        </div>
+    </div>
+
+    <div style="padding:0px;border:1px dashed black;margin:20px;background-color:#FEFFAF;overflow:hidden">
+        <div style="padding:0px;border:0px dashed black;margin:20px;background-color:#BFFFFF;">
+            2 child boxes inside a parent box, all 3 boxes have 20px margins, parent has <em>1px border</em> to avoid ancestor
+            collapsing
+        </div>
+        <div style="padding:0px;border:0px dashed black;margin:20px;background-color:#BFFFFF;">
+            2 child boxes have their top and bottom margins collapsed. Therefore the middle margin is 20px and not 40px. Most of the
+            time this is what we want.
+        </div>
+    </div>
+
+    <div style="padding:0px;border:1px dashed black;margin:20px;background-color:#FEFFAF;overflow:hidden">
+        <div style="padding:0px;border:0px dashed black;margin:20px;background-color:#BFFFFF;float:left;clear:both">
+            2 child boxes inside a parent box, all have 20px margins, parent has <em>1px padding</em> to avoid ancestor collapsing</div>
+        <div style="padding:0px;border:0px dashed black;margin:0px;background-color:#BFFFFF;clear:left"></div>
+        <div style="padding:0px;border:0px dashed black;margin:20px;background-color:#BFFFFF;float:left;clear:both;">
+            2 child boxes are this time <em>floated left and cleared</em>. Additionally clearing divs are added for Internet
+            Explorer support. This method gives us 40px in the middle by disabling margin collapsing of the two siblings.
+        </div>
+        <div style="padding:0px;border:0px dashed black;margin:0px;background-color:#BFFFFF;clear:left"></div>
+    </div>
+
+
+    <div style="border:1px dashed black;margin:20px;background-color:#FEFFAF;">
+        <div style="margin:20px;background-color:#BFFFFF;">
+            2 child boxes inside a parent box, all have 20px margins, parent has <em>1px padding</em> to avoid ancestor collapsing
+        </div>
+        <div style="margin:20px;background-color:#BFFFFF;display:inline-block;">
+            This time we give the 1st child box a <em>display of inline-block</em> which is supposed to make its margins
+            not collapse. While this inline-block behavior works like a charm in compliant browsers, unfortunately it does
+            not work in IE7.
+        </div>
+    </div>
+
+    <div style="border:1px dashed black;margin:20px;background-color:#FEFFAF;">
+        <div style="margin:20px;background-color:#BFFFFF;">
+            2 child boxed inside a parent box, all have 20px margins, parent has <em>1px border</em> to avoid ancestor collapsing
+        </div>
+        <div style="margin:20px;background-color:#BFFFFF;display:inline-block;display:inline-table;">
+            Finally this we use a <em>display of inline-table</em> on the first child box. This behavior works in IE7 and
+            FF2 and above. Although inline-table does not break out of collapsing in IE7. You may also try overloading both
+            properties on the element as a fail safe like: display:inline-block;display:inline-table;
+        </div>
+    </div>
+
+
+    <section>
+        <h2> References </h2>
+        <a href="http://www.seifi.org/css/understanding-taming-collapsing-margins-in-css.html">http://www.seifi.org/css/understanding-taming-collapsing-margins-in-css.html</a>
+    </section>
 
 
 </body>
