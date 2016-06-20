@@ -5,23 +5,34 @@
     <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 
+<style>
+body{
+    display: flex;   
+}
+body > h1{
+    width: 100%;
+}
+body > aside{
+    width:300px; 
+}
+
+</style>
+
 <body>
     <h1> Play Ground</h1>
+
+    <aside></aside>
+    
     <article>
-        <h2>HTML</h2>
-        <ol>
-            <li></li>
-        </ol>
-        <h2>CSS</h2>
-        <ol>
-            <li><a href="./CSS/margins/">Margins</a></li>
-            <li><a href="./CSS/border/">Border</a></li>
-        </ol>
-        <h2>JavaScript</h2>
-        <ol>
-            <li></li>
-        </ol>
+        <ui-view></ui-view>
     </article>
+    
+    <section>
+        <script src="./libs/angular/angular.js"></script>
+        <script src="./libs/angular-ui-router/angular-ui-router.js"></script>
+        <script src="./app.js"></script>
+    </section>
+
 </body>
 
 </html>

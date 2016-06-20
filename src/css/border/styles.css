@@ -1,0 +1,72 @@
+body{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 1px;
+    border: 1px;
+    height: 700px;
+    min-height: 700px;
+}
+
+body:before, body:after{
+    content: '';
+    display: table;
+}
+
+.one{
+    background: #ff9e2c;
+    margin: 30px;
+}
+.one h1 {
+  margin: 10px;
+  background: #cfc;
+}
+.one p {
+  margin: 10px;
+  background: #cf9;
+}
+
+/* DEMO STYLES */
+
+/* Parent */
+.two div {
+  margin: 15px 0;
+}
+
+/* Add padding to the parent */
+.padding:after, .padding:before {
+  content: '';
+  display:table;
+  /*clear: both;*/
+}
+
+/* Here come the children */
+.red {
+  background-color: #ff6b6b;
+}
+
+.orange {
+  background-color: #ff9e2c;
+}
+
+.yellow {
+  background-color: #eeee78;
+}
+
+.green {
+  background-color: #4ecd9d;
+}
+
+.blue {
+  background-color: #4e97cd;
+}
+
+.purple {
+  background-color: #6c4ecd;
+}
+
+.sibling{
+    margin: 10px;
+}
+.float{
+    float: left;
+}
