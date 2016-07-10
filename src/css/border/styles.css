@@ -1,14 +1,24 @@
-body{
-    font-family: sans-serif;
-    padding: 0;
-    margin: 1px;
-    border: 1px;
-    height: 700px;
-    min-height: 700px;
+.border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-body:before, body:after{
-    content: '';
-    display: table;
+.border div{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    border-width: 2px;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+    border-style: solid;
+    color: white;
+    line-height: 200px;
+    text-align: center;
 }
-
+.border div:hover{
+    border-color:orange;
+    border-style: solid;
+    font-weight: bolder;
+}
