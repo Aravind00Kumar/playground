@@ -7,27 +7,26 @@
 
 
             // CSS demo routes
-            $stateProvider.state('css', {})
-                .state('home', {
-                    url: "/home",
-                    templateUrl: "home.html",
+            $stateProvider
+                .state('css', {
+                    url: "/css",
+                    template: '<ui-view></ui-view>'
                 })
-                .state('margins', {
-                    url: "/margins",
-                    templateUrl: "css/margins/margins.html",
-                    //parent: "css"
+                .state('css.margin', {
+                    url: "/margin",
+                    templateUrl: "css/margin/css.margin.html",
                 })
-                .state('borders', {
-                    url: "/borders",
-                    templateUrl: "css/borders/borders.html",
-                    //parent: "css"
-
+                .state('css.border', {
+                    url: "/border",
+                    templateUrl: "css/border/css.border.html",
                 });
         }])
+
         .controller('HomeController', [function () {
             var vm = this;
             this.title = 'Home';
         }])
+
         .controller('AboutController', [function () {
             var vm = this;
             this.title = 'About';
