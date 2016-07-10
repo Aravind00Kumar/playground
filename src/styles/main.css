@@ -25,6 +25,20 @@ h1{
     height: 40px;
 }
 
+.CodeMirror{
+    border: 1px solid #eee;
+    height: auto;
+    margin: 20px;
+}
+.CodeMirror-scroll {
+  height: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+textarea[name="code"]{
+    display: none;
+}
 
 h2{
     color: #666;

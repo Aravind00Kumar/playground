@@ -1,0 +1,17 @@
+{
+  "name": "playground",
+  "homepage": "https://github.com/Aravind00Kumar/playground",
+  "authors": [
+    "Aravind00Kumar <AravindKumarmail@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
